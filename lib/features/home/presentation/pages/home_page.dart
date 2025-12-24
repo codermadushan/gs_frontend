@@ -11,6 +11,7 @@ import '../../../../core/enums/user_role.dart';
 import '../../../../core/constants/app_size.dart';
 import '../../../../core/widgets/sign_out_button.dart';
 import '../../../../core/widgets/texts.dart';
+import '../../../status/presentation/widgets/status.dart';
 import '../widgets/home_page/app_information_button.dart';
 import '../widgets/home_page/barbers_section/barbers_section.dart';
 import '../widgets/home_page/admin_button.dart';
@@ -93,6 +94,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: AppSize.gapLarge),
+
+            Status(),
+
             SizedBox(height: AppSize.gapLarge),
 
             SlideshowSection(),
