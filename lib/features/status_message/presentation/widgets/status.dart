@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/enums/status_color.dart';
+import '../../../../core/constants/app_color.dart';
 import 'status_message.dart';
 import 'status_message_place_holder.dart';
 
@@ -13,7 +13,7 @@ class Status extends StatelessWidget {
 
     if (isLoaded) {
       return const StatusMessage(
-        statusColor: StatusColor.muted,
+        color: AppColor.muted,
         message: 'Currently open',
       );
     }
