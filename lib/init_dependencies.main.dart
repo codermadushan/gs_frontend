@@ -120,7 +120,10 @@ void _statusMessage() {
       () => StatusMessageRemoteRepository(getIt()),
     )
     ..registerLazySingleton(
-      () => GetStatusMessageCubit(getStatusMessage: GetStatusMessage(getIt())),
+      () => GetStatusMessageCubit(GetStatusMessage(getIt())),
+    )
+    ..registerLazySingleton(
+      () => UpdateStatusMessageCubit(UpdateStatusMessage(getIt())),
     );
 }
 

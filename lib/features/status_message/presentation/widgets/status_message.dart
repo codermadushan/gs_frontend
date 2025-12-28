@@ -21,7 +21,7 @@ class _StatusMessageState extends State<StatusMessage> {
     super.initState();
 
     _getStatusMessageCubit = context.read<GetStatusMessageCubit>();
-    _getStatusMessageCubit.load();
+    _getStatusMessageCubit.start();
   }
 
   @override

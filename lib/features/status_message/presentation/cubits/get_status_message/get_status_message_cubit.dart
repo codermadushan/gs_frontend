@@ -10,11 +10,15 @@ part 'get_status_message_state.dart';
 class GetStatusMessageCubit extends Cubit<GetStatusMessageState> {
   final GetStatusMessage _getStatusMessage;
 
-  GetStatusMessageCubit({required GetStatusMessage getStatusMessage})
+  GetStatusMessageCubit(GetStatusMessage getStatusMessage)
     : _getStatusMessage = getStatusMessage,
       super(GetStatusMessageInitial());
 
-  Future<void> load() async {
+  Future<void> start() async {
+    if (state is GetStatusMessageLoading) return;
+
+    emit(GetStatusMessageLoading());
+
     final params = GetStatusMessageParams();
     final res = await _getStatusMessage(params);
 

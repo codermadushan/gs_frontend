@@ -28,7 +28,16 @@ final class StatusMessageRemoteRepository implements StatusMessageRepository {
   Future<Either<Failure, Unit>> updateStatusMessage({
     required String message,
     required String color,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    try {
+      final res = await _statusMessageDataSource.updateStatusMessage(
+        message: message,
+        color: color,
+      );
+
+      return right(res);
+    } on ServerException catch (e) {
+      return left(Failure(e.message));
+    }
   }
 }

@@ -58,6 +58,8 @@ import 'features/status_message/data/datasources/status_message_remote_data_sour
 import 'features/status_message/data/repositories/status_message_remote_repository.dart';
 import 'features/status_message/domain/repositories/status_message_repository.dart';
 import 'features/status_message/domain/usecases/get_status_message.dart';
+import 'features/status_message/domain/usecases/update_status_message.dart';
 import 'features/status_message/presentation/cubits/get_status_message/get_status_message_cubit.dart';
+import 'features/status_message/presentation/cubits/update_status_message/update_status_message_cubit.dart';
 
 part 'init_dependencies.main.dart';

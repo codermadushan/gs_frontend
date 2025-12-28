@@ -52,7 +52,32 @@ final class StatusMessageRemoteDataSource implements StatusMessageDataSource {
   Future<Unit> updateStatusMessage({
     required String message,
     required String color,
-  }) {
-    throw UnimplementedError();
+  }) async {
+    try {
+      final token = await _appSecureStorage.read(AppString.tokenName);
+
+      if (token == null) {
+        throw const ServerException('Authentication token is missing.');
+      }
+
+      final res = await patch(
+        Uri.parse('$_baseUrl/api/v1/status-message'),
+        headers: {
+          'Authorization': 'Bearer $token',
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode({'msg': message, 'color': color}),
+      );
+
+      if (res.statusCode != 200) {
+        throw const ServerException('Failed to update status message');
+      }
+
+      return unit;
+    } on ServerException catch (e) {
+      throw ServerException(e.message);
+    } catch (e) {
+      throw const ServerException(AppString.defaultErrorMessage);
+    }
   }
 }
