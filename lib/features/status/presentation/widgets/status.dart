@@ -9,13 +9,12 @@ class Status extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const isLoaded = true;
+    const isLoaded = false;
 
     if (isLoaded) {
       return const StatusMessage(
-        statusColor: StatusColor.green,
-        message:
-            'Currently open this is the sample message to test current status of the saloon',
+        statusColor: StatusColor.muted,
+        message: 'Currently open',
       );
     }
 
