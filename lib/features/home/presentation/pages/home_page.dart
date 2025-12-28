@@ -11,7 +11,7 @@ import '../../../../core/enums/user_role.dart';
 import '../../../../core/constants/app_size.dart';
 import '../../../../core/widgets/sign_out_button.dart';
 import '../../../../core/widgets/texts.dart';
-import '../../../status_message/presentation/widgets/status.dart';
+import '../../../status_message/presentation/widgets/status_message.dart';
 import '../widgets/home_page/app_information_button.dart';
 import '../widgets/home_page/barbers_section/barbers_section.dart';
 import '../widgets/home_page/admin_button.dart';
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             SizedBox(height: AppSize.gapLarge),
 
-            Status(),
+            StatusMessage(),
 
             SizedBox(height: AppSize.gapLarge),
 

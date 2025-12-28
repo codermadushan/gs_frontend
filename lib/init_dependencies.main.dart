@@ -111,6 +111,19 @@ void _slideshow() {
     );
 }
 
+void _statusMessage() {
+  getIt
+    ..registerLazySingleton<StatusMessageDataSource>(
+      () => StatusMessageRemoteDataSource(getIt()),
+    )
+    ..registerLazySingleton<StatusMessageRepository>(
+      () => StatusMessageRemoteRepository(getIt()),
+    )
+    ..registerLazySingleton(
+      () => GetStatusMessageCubit(getStatusMessage: GetStatusMessage(getIt())),
+    );
+}
+
 void initDependencies() {
   _common();
   _appWideStates();
@@ -119,4 +132,5 @@ void initDependencies() {
   _barbers();
   _reservations();
   _slideshow();
+  _statusMessage();
 }

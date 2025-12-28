@@ -53,5 +53,11 @@ import 'features/slideshow/data/repositories/slideshow_remote_repository.dart';
 import 'features/slideshow/domain/repositories/slideshow_repository.dart';
 import 'features/slideshow/domain/usecases/load_images.dart';
 import 'features/slideshow/presentation/cubit/slideshow_cubit.dart';
+import 'features/status_message/data/datasources/status_message_data_source.dart';
+import 'features/status_message/data/datasources/status_message_remote_data_source.dart';
+import 'features/status_message/data/repositories/status_message_remote_repository.dart';
+import 'features/status_message/domain/repositories/status_message_repository.dart';
+import 'features/status_message/domain/usecases/get_status_message.dart';
+import 'features/status_message/presentation/cubits/get_status_message/get_status_message_cubit.dart';
 
 part 'init_dependencies.main.dart';

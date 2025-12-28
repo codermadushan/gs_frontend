@@ -1,44 +1,44 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_size.dart';
-import '../../../../core/widgets/app_card.dart';
-import '../../../../core/widgets/texts.dart';
-import 'pulse_dot.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class StatusMessage extends StatelessWidget {
-  final Color _color;
-  final String _message;
+import '../cubits/get_status_message/get_status_message_cubit.dart';
+import 'dot_and_message.dart';
+import 'status_message_place_holder.dart';
 
-  const StatusMessage({
-    super.key,
-    required Color color,
-    required String message,
-  }) : _color = color,
-       _message = message;
+class StatusMessage extends StatefulWidget {
+  const StatusMessage({super.key});
+
+  @override
+  State<StatusMessage> createState() => _StatusMessageState();
+}
+
+class _StatusMessageState extends State<StatusMessage> {
+  late final GetStatusMessageCubit _getStatusMessageCubit;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _getStatusMessageCubit = context.read<GetStatusMessageCubit>();
+    _getStatusMessageCubit.load();
+  }
 
   @override
   Widget build(BuildContext context) {
-    const dotRadius = 5.0;
+    return BlocBuilder<GetStatusMessageCubit, GetStatusMessageState>(
+      builder: (context, state) {
+        if (state is GetStatusMessageLoaded) {
+          final statusMessage = state.statusMessage;
 
-    return AppCard(
-      margin: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+          return DotAndMessage(
+            color: statusMessage.color,
+            message: statusMessage.message,
+          );
+        }
 
-      padding: const EdgeInsets.all(AppSize.pagePadding),
-
-      child: Row(
-        children: [
-          SizedBox.square(
-            dimension: dotRadius * 4,
-            child: Center(
-              child: PulseDot(color: _color, dotRadius: dotRadius),
-            ),
-          ),
-
-          const SizedBox(width: AppSize.pagePadding),
-
-          Expanded(child: AppTextBody(_message, color: _color)),
-        ],
-      ),
+        return const StatusMessagePlaceHolder();
+      },
     );
   }
 }
