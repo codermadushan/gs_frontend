@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.codermadushan.gs_frontend"
     compileSdk = 36
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
