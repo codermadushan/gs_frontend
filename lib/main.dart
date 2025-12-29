@@ -21,6 +21,8 @@ import 'features/reservations/presentation/cubits/selected_date_cubit.dart';
 import 'features/reservations/presentation/cubits/selected_service_options/selected_service_options_cubit.dart';
 import 'features/reservations/presentation/cubits/selected_slot_cubit.dart';
 import 'features/status_message/presentation/cubits/get_status_message/get_status_message_cubit.dart';
+import 'features/status_message/presentation/cubits/new_status_message_cubit.dart';
+import 'features/status_message/presentation/cubits/selected_message_color_cubit.dart';
 import 'features/status_message/presentation/cubits/update_status_message/update_status_message_cubit.dart';
 import 'init_dependencies.dart';
 
@@ -62,6 +64,8 @@ Future<void> main() async {
         // status_message
         BlocProvider(create: (context) => getIt<GetStatusMessageCubit>()),
         BlocProvider(create: (context) => getIt<UpdateStatusMessageCubit>()),
+        BlocProvider(create: (context) => getIt<SelectedMessageColorCubit>()),
+        BlocProvider(create: (context) => getIt<NewStatusMessageCubit>()),
       ],
       child: const GS(),
     ),

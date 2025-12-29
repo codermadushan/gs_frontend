@@ -60,6 +60,8 @@ import 'features/status_message/domain/repositories/status_message_repository.da
 import 'features/status_message/domain/usecases/get_status_message.dart';
 import 'features/status_message/domain/usecases/update_status_message.dart';
 import 'features/status_message/presentation/cubits/get_status_message/get_status_message_cubit.dart';
+import 'features/status_message/presentation/cubits/new_status_message_cubit.dart';
+import 'features/status_message/presentation/cubits/selected_message_color_cubit.dart';
 import 'features/status_message/presentation/cubits/update_status_message/update_status_message_cubit.dart';
 
 part 'init_dependencies.main.dart';

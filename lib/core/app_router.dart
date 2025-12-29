@@ -15,6 +15,7 @@ import '../features/home/presentation/pages/home_page.dart';
 import '../features/reservations/presentation/pages/date_time_selection_page.dart';
 import '../features/reservations/presentation/pages/reservation_details_page.dart';
 import '../features/reservations/presentation/pages/service_selection_page.dart';
+import '../features/status_message/presentation/pages/update_message_page.dart';
 
 sealed class AppRouter {
   // auth
@@ -40,6 +41,9 @@ sealed class AppRouter {
   static const pendingReservationsPage = '/pending-reservations';
   static const pendingReservationDetailsPage = '/pending-reservation-details';
   static const rejectPendingReservationPage = '/reject-pending-reservation';
+
+  // status_message
+  static const updateMessagePage = '/update-message';
 
   static Map<String, Widget Function(BuildContext)> routes(
     BuildContext context,
@@ -72,6 +76,9 @@ sealed class AppRouter {
           const PendingReservationDetailsPage(),
       rejectPendingReservationPage: (context) =>
           const RejectPendingReservationPage(),
+
+      // status_message
+      updateMessagePage: (context) => const UpdateMessagePage(),
     };
   }
 }

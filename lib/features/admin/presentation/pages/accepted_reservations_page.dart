@@ -52,10 +52,19 @@ class _AcceptedReservationsPageState extends State<AcceptedReservationsPage> {
           ),
         ),
         title: const AppTextH2('Accepted'),
-        centerTitle: true,
+        centerTitle: false,
 
         actionsPadding: const EdgeInsets.only(right: AppSize.pagePadding),
         actions: [
+          AppIconButton(
+            icon: const Icon(FontAwesomeIcons.message),
+            onPressed: () async {
+              await Navigator.pushNamed(context, AppRouter.updateMessagePage);
+            },
+          ),
+
+          const SizedBox(width: AppSize.pagePadding),
+
           AppIconButton(
             icon: const Icon(FontAwesomeIcons.clock),
             onPressed: () async {

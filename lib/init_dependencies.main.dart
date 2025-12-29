@@ -124,7 +124,9 @@ void _statusMessage() {
     )
     ..registerLazySingleton(
       () => UpdateStatusMessageCubit(UpdateStatusMessage(getIt())),
-    );
+    )
+    ..registerLazySingleton(() => SelectedMessageColorCubit())
+    ..registerLazySingleton(() => NewStatusMessageCubit());
 }
 
 void initDependencies() {
