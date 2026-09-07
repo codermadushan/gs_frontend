@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/app_router.dart';
 import '../../../../../core/constants/app_size.dart';
@@ -98,7 +97,7 @@ class _CreateReservationButtonState extends State<CreateReservationButton> {
                 isLoading: isLoading,
                 onPressed: widget._onPressed,
                 label: 'Create reservation',
-                icon: FontAwesomeIcons.chair,
+                icon: Icons.chair_rounded,
               ),
             );
           },

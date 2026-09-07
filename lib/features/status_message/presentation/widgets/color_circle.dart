@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/enums/status_message_color.dart';
 
@@ -42,7 +40,7 @@ class ColorCircle extends StatelessWidget {
         backgroundColor: _getColor(_color),
         radius: 25,
         child: _color == _selectedColor
-            ? const Icon(FontAwesomeIcons.check, color: AppColor.background)
+            ? const Icon(Icons.check_rounded, color: AppColor.background)
             : null,
       ),
     );

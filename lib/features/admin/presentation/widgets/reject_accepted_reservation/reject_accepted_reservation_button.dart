@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/app_router.dart';
 import '../../../../../core/constants/app_color.dart';
@@ -77,7 +76,7 @@ class _RejectAcceptedReservationButtonState
             foregroundColor: AppColor.foreground,
             backgroundColor: AppColor.destructive,
             label: 'Reject',
-            icon: FontAwesomeIcons.solidCircleXmark,
+            icon: Icons.cancel_outlined,
             isLoading: isLoading,
 
             onPressed: widget._onPressed,

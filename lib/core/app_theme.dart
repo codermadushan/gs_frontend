@@ -9,13 +9,6 @@ sealed class AppTheme {
       seedColor: AppColor.primary,
     ),
 
-    pageTransitionsTheme: const PageTransitionsTheme(
-      builders: {
-        TargetPlatform.android: CupertinoPageTransitionsBuilder(),
-        TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-      },
-    ),
-
     scaffoldBackgroundColor: AppColor.background,
 
     appBarTheme: const AppBarTheme(

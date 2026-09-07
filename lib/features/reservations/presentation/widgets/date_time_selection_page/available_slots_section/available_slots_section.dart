@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../core/constants/app_size.dart';
 import '../../../../../../core/widgets/section_title.dart';
@@ -16,10 +15,7 @@ class AvailableSlotsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SectionTitle(
-          label: 'Select time',
-          iconData: FontAwesomeIcons.alarmClock,
-        ),
+        const SectionTitle(label: 'Select time', iconData: Icons.alarm_rounded),
 
         const SizedBox(height: AppSize.gapSmall),
 

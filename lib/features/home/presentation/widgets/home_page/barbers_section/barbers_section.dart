@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../core/cubits/app_barbers/app_barbers_cubit.dart';
 import '../../../../../../core/widgets/section_title.dart';
@@ -18,7 +17,7 @@ class BarbersSection extends StatelessWidget {
       children: [
         const SectionTitle(
           label: 'Barbers',
-          iconData: FontAwesomeIcons.person,
+          iconData: Icons.person_rounded,
           padding: EdgeInsets.only(left: AppSize.pagePadding),
         ),
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/app_router.dart';
 import '../../../../../core/constants/app_color.dart';
@@ -80,7 +79,7 @@ class _CompleteAcceptedReservationButtonState
             backgroundColor: AppColor.success,
             onPressed: widget._onPressed,
             label: 'Complete',
-            icon: FontAwesomeIcons.solidCircleCheck,
+            icon: Icons.check_circle_outline_rounded,
           ),
         );
       },

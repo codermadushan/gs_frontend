@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_media.dart';
 import '../../../../core/constants/app_size.dart';
@@ -25,7 +23,7 @@ class AppInformationPage extends StatelessWidget {
             child: AppIconButton(
               backgroundColor: AppColor.foreground,
               foregroundColor: AppColor.background,
-              icon: const Icon(FontAwesomeIcons.arrowLeft),
+              icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () async {
                 await Navigator.maybePop(context);
               },
@@ -90,7 +88,7 @@ class AppInformationPage extends StatelessWidget {
                 const Row(
                   spacing: AppSize.pagePadding,
                   children: [
-                    Icon(FontAwesomeIcons.phone, color: AppColor.success),
+                    Icon(Icons.phone_rounded, color: AppColor.success),
 
                     AppTextH5('+94 76 226 7979'),
                   ],
@@ -101,10 +99,7 @@ class AppInformationPage extends StatelessWidget {
                 const Row(
                   spacing: AppSize.pagePadding,
                   children: [
-                    Icon(
-                      FontAwesomeIcons.solidEnvelope,
-                      color: AppColor.cardForeground,
-                    ),
+                    Icon(Icons.mail_rounded, color: AppColor.cardForeground),
 
                     AppTextH5('codermadushan@gmail.com'),
                   ],
@@ -115,10 +110,7 @@ class AppInformationPage extends StatelessWidget {
                 const Row(
                   spacing: AppSize.pagePadding,
                   children: [
-                    Icon(
-                      FontAwesomeIcons.github,
-                      color: AppColor.accentForeground,
-                    ),
+                    Icon(Icons.code_rounded, color: AppColor.accentForeground),
 
                     AppTextH5('@codermadushan'),
                   ],

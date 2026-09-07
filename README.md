@@ -1,3 +1,3 @@
-# GS App
+# gs_frontend
 
-- Flutter version: 3.38.1
+<!-- flutter: 3.44.9 -->

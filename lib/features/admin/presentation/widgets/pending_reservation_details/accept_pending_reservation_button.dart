@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/app_router.dart';
 import '../../../../../core/constants/app_color.dart';
@@ -85,7 +84,7 @@ class _AcceptPendingReservationButtonState
             foregroundColor: AppColor.foreground,
             backgroundColor: AppColor.success,
             label: 'Accept',
-            icon: FontAwesomeIcons.solidCircleCheck,
+            icon: Icons.check_circle_outline_rounded,
 
             onPressed: () async {
               final confirmed = await ConfirmationDialog.show(
@@ -93,7 +92,7 @@ class _AcceptPendingReservationButtonState
                 description:
                     'Are you sure you want to accept this reservation?',
                 iconColor: AppColor.success,
-                icon: FontAwesomeIcons.solidCircleCheck,
+                icon: Icons.check_circle_outline_rounded,
               );
 
               if (confirmed == null || !confirmed) return;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/app_router.dart';
 import '../../../../core/constants/app_color.dart';
@@ -44,7 +43,7 @@ class _AcceptedReservationsPageState extends State<AcceptedReservationsPage> {
             child: AppIconButton(
               backgroundColor: AppColor.foreground,
               foregroundColor: AppColor.background,
-              icon: const Icon(FontAwesomeIcons.arrowLeft),
+              icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () async {
                 await Navigator.maybePop(context);
               },
@@ -57,7 +56,7 @@ class _AcceptedReservationsPageState extends State<AcceptedReservationsPage> {
         actionsPadding: const EdgeInsets.only(right: AppSize.pagePadding),
         actions: [
           AppIconButton(
-            icon: const Icon(FontAwesomeIcons.message),
+            icon: const Icon(Icons.sms_rounded),
             onPressed: () async {
               await Navigator.pushNamed(context, AppRouter.updateMessagePage);
             },
@@ -66,7 +65,7 @@ class _AcceptedReservationsPageState extends State<AcceptedReservationsPage> {
           const SizedBox(width: AppSize.pagePadding),
 
           AppIconButton(
-            icon: const Icon(FontAwesomeIcons.clock),
+            icon: const Icon(Icons.pending_rounded),
             onPressed: () async {
               await Navigator.pushNamed(
                 context,

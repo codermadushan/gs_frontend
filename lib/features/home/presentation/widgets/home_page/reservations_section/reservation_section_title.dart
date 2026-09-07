@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../core/constants/app_size.dart';
 import '../../../../../../core/cubits/app_user_reservations/app_user_reservations_cubit.dart';
@@ -32,14 +31,14 @@ class _ReservationSectionTitleState extends State<ReservationSectionTitle> {
       children: [
         const SectionTitle(
           label: 'My reservations',
-          iconData: FontAwesomeIcons.calendar,
+          iconData: Icons.calendar_month_rounded,
           padding: EdgeInsets.only(left: AppSize.pagePadding),
         ),
 
         const Spacer(),
 
         AppIconButton(
-          icon: const Icon(FontAwesomeIcons.arrowRotateRight),
+          icon: const Icon(Icons.refresh_rounded),
           onPressed: () {
             _appUserReservationsCubit.loadUserReservations();
           },

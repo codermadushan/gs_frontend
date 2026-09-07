@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/enums/status_message_color.dart';
 import '../../../../core/widgets/app_snack_bar.dart';
@@ -88,7 +87,7 @@ class _UpdateMessageButtonState extends State<UpdateMessageButton> {
                       );
                     },
                     label: 'Update note',
-                    icon: FontAwesomeIcons.arrowRotateRight,
+                    icon: Icons.refresh_rounded,
                     isDisabled: !isActive,
                     isLoading: isLoading,
                   ),

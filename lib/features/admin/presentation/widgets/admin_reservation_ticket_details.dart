@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../core/constants/app_color.dart';
@@ -50,7 +49,7 @@ class AdminReservationTicketDetails extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: statusColor.withAlpha(AppSize.opacityAlpha),
                     ),
-                    child: Icon(FontAwesomeIcons.person, color: statusColor),
+                    child: Icon(Icons.person_rounded, color: statusColor),
                   ),
                   const SizedBox(width: AppSize.pagePadding / 2),
                   AppTextH5(_reservation.authorName, color: statusColor),

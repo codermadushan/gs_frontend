@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../core/app_router.dart';
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_size.dart';
@@ -42,7 +40,7 @@ class _PendingReservationDetailsPageState
             child: AppIconButton(
               backgroundColor: AppColor.foreground,
               foregroundColor: AppColor.background,
-              icon: const Icon(FontAwesomeIcons.arrowLeft),
+              icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () async {
                 await Navigator.maybePop(context);
               },
@@ -72,7 +70,7 @@ class _PendingReservationDetailsPageState
                         foregroundColor: AppColor.foreground,
                         backgroundColor: AppColor.destructive,
                         label: 'Reject',
-                        icon: FontAwesomeIcons.solidCircleXmark,
+                        icon: Icons.cancel_outlined,
 
                         onPressed: () async {
                           await Navigator.pushNamed(

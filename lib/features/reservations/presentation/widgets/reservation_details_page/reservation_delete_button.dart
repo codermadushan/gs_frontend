@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/constants/app_color.dart';
 import '../../../../../core/cubits/app_user_reservations/app_user_reservations_cubit.dart';
@@ -77,7 +76,7 @@ class _ReservationDeleteButtonState extends State<ReservationDeleteButton> {
             onPressed: () async {
               final confirmed = await ConfirmationDialog.show(
                 context: context,
-                icon: FontAwesomeIcons.trash,
+                icon: Icons.delete_rounded,
                 description:
                     'Are you sure you want to delete this reservation?',
               );
@@ -87,7 +86,7 @@ class _ReservationDeleteButtonState extends State<ReservationDeleteButton> {
               _deleteReservationCubit.deleteReservation(widget._reservationId);
             },
             label: 'Delete reservation',
-            icon: FontAwesomeIcons.trash,
+            icon: Icons.delete_rounded,
           ),
         );
       },

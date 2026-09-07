@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../../core/app_router.dart';
 import '../../../../../core/constants/app_color.dart';
 import '../../../../../core/constants/app_size.dart';
@@ -18,7 +16,7 @@ class AppInformationButton extends StatelessWidget {
         child: AppIconButton(
           foregroundColor: AppColor.background,
           backgroundColor: AppColor.foreground,
-          icon: const Icon(FontAwesomeIcons.code),
+          icon: const Icon(Icons.code_rounded),
           onPressed: () async {
             await Navigator.pushNamed(context, AppRouter.appInformationPage);
           },

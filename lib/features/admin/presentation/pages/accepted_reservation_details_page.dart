@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../core/app_router.dart';
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_size.dart';
@@ -41,7 +39,7 @@ class _AcceptedReservationDetailsPageState
             child: AppIconButton(
               backgroundColor: AppColor.foreground,
               foregroundColor: AppColor.background,
-              icon: const Icon(FontAwesomeIcons.arrowLeft),
+              icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () async {
                 await Navigator.maybePop(context);
               },
@@ -80,7 +78,7 @@ class _AcceptedReservationDetailsPageState
                           );
                         },
                         label: 'Reject',
-                        icon: FontAwesomeIcons.solidCircleXmark,
+                        icon: Icons.cancel_outlined,
                       ),
                     ),
 
@@ -96,7 +94,7 @@ class _AcceptedReservationDetailsPageState
                           );
                         },
                         label: 'Complete',
-                        icon: FontAwesomeIcons.solidCircleCheck,
+                        icon: Icons.check_circle_outline_rounded,
                       ),
                     ),
                   ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../../core/constants/app_size.dart';
 import '../../../../../../core/cubits/app_barber_services/app_barber_services_cubit.dart';
@@ -21,7 +20,7 @@ class ServicesSection extends StatelessWidget {
       children: [
         const SectionTitle(
           label: 'Services',
-          iconData: FontAwesomeIcons.scissors,
+          iconData: Icons.content_cut_rounded,
         ),
 
         const SizedBox(height: AppSize.gapSmall),

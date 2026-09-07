@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/constants/app_color.dart';
 import '../../../../core/constants/app_size.dart';
@@ -60,7 +59,7 @@ class _RejectPendingReservationPageState
             child: AppIconButton(
               backgroundColor: AppColor.foreground,
               foregroundColor: AppColor.background,
-              icon: const Icon(FontAwesomeIcons.arrowLeft),
+              icon: const Icon(Icons.arrow_back_ios_rounded),
               onPressed: () async {
                 await Navigator.maybePop(context);
               },

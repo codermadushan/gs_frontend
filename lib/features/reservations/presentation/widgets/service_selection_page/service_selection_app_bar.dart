@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../../core/constants/app_color.dart';
 import '../../../../../core/constants/app_size.dart';
 import '../../../../../core/constants/app_style.dart';
@@ -30,7 +28,7 @@ class ServiceSelectionAppBar extends StatelessWidget {
             onPressed: () async {
               await Navigator.maybePop(context);
             },
-            icon: const Icon(FontAwesomeIcons.arrowLeft),
+            icon: const Icon(Icons.arrow_back_ios_rounded),
             backgroundColor: AppColor.foreground,
             foregroundColor: AppColor.background,
           ),

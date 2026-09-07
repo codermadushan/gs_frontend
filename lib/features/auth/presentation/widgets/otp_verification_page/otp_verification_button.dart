@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/app_router.dart';
 import '../../../../../core/widgets/app_snack_bar.dart';
@@ -41,7 +40,7 @@ class OtpVerificationButton extends StatelessWidget {
         return MainButton(
           label: 'Verify',
           onPressed: _onPressed,
-          icon: FontAwesomeIcons.unlock,
+          icon: Icons.lock_open_rounded,
           isLoading: isLoading,
         );
       },

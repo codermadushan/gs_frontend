@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../app_router.dart';
 import '../constants/app_color.dart';
@@ -53,7 +52,7 @@ class _SignOutButtonState extends State<SignOutButton> {
         onPressed: () async {
           final confirmed = await ConfirmationDialog.show(
             context: context,
-            icon: FontAwesomeIcons.arrowRightFromBracket,
+            icon: Icons.logout_rounded,
             description: 'Do you really want to exit?',
           );
 
@@ -61,7 +60,7 @@ class _SignOutButtonState extends State<SignOutButton> {
 
           _appUserCubit.logOut();
         },
-        icon: const Icon(FontAwesomeIcons.arrowRightFromBracket),
+        icon: const Icon(Icons.logout_rounded),
       ),
     );
   }

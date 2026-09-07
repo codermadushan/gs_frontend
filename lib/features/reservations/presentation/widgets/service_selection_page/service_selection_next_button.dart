@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/widgets/main_button.dart';
 import '../../cubits/selected_service_options/selected_service_options_cubit.dart';
@@ -33,7 +32,7 @@ class ServiceSelectionNextButton extends StatelessWidget {
         return MainButton(
           label: 'Next',
           isDisabled: state.optionIds.isEmpty,
-          icon: FontAwesomeIcons.arrowRight,
+          icon: Icons.arrow_forward_rounded,
           onPressed: _onPressed,
         );
       },

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../core/constants/app_color.dart';
@@ -44,7 +43,7 @@ class _DateSelectionSectionState extends State<DateSelectionSection> {
       children: [
         const SectionTitle(
           label: 'Select date',
-          iconData: FontAwesomeIcons.calendar,
+          iconData: Icons.calendar_month_rounded,
         ),
 
         const SizedBox(height: AppSize.gapSmall),
@@ -77,7 +76,7 @@ class _DateSelectionSectionState extends State<DateSelectionSection> {
                   );
                 },
                 child: AppIconButton(
-                  icon: const Icon(FontAwesomeIcons.calendar),
+                  icon: const Icon(Icons.calendar_month_rounded),
                   onPressed: () async {
                     final now = DateTime.now();
 

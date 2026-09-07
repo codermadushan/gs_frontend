@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../constants/app_color.dart';
 import '../constants/app_size.dart';
 import 'texts.dart';
@@ -18,7 +16,7 @@ sealed class AppSnackBar {
         spacing: AppSize.pagePadding,
         children: [
           const Icon(
-            FontAwesomeIcons.solidCircleCheck,
+            Icons.check_circle_outline_rounded,
             size: _iconSize,
             color: AppColor.success,
           ),
@@ -39,7 +37,8 @@ sealed class AppSnackBar {
         spacing: AppSize.pagePadding,
         children: [
           const Icon(
-            FontAwesomeIcons.solidCircleXmark,
+            // FontAwesomeIcons.solidCircleXmark,
+            Icons.cancel_outlined,
             size: _iconSize,
             color: AppColor.destructive,
           ),
